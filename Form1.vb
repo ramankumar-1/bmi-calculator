@@ -33,19 +33,15 @@
         height = heightInput.Text
         bmi = weight / (height * height)
 
-        MessageBox.Show("Your BMI is: " & Math.Round(bmi, 2))
+        'MessageBox.Show("Your BMI is: " & Math.Round(bmi, 2))'
+        outputDisplay.Visible = True
+        outputDisplay.Text = "Your BMI is: " & Math.Round(bmi, 2)
+
+
 
     End Sub
+    Private Sub outputDisplay_TextChanged(sender As Object, e As EventArgs) Handles outputDisplay.TextChanged
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles maleRadio.CheckedChanged
-
-    End Sub
-
-    Private Sub ageInput_TextChanged(sender As Object, e As EventArgs) Handles ageInput.TextChanged
 
     End Sub
 End Class

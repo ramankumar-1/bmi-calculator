@@ -28,11 +28,7 @@ Partial Class Form1
         Label2 = New Label()
         Label3 = New Label()
         Button1 = New Button()
-        Label4 = New Label()
-        Label5 = New Label()
-        maleRadio = New RadioButton()
-        femaleRadio = New RadioButton()
-        ageInput = New TextBox()
+        outputDisplay = New RichTextBox()
         SuspendLayout()
         ' 
         ' weightInput
@@ -75,63 +71,21 @@ Partial Class Form1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
         Button1.Font = New Font("Bahnschrift", 14F)
-        Button1.Location = New Point(32, 250)
+        Button1.Location = New Point(32, 186)
         Button1.Name = "Button1"
         Button1.Size = New Size(130, 51)
         Button1.TabIndex = 6
         Button1.Text = "Calculate"
         Button1.UseVisualStyleBackColor = False
         ' 
-        ' Label4
+        ' outputDisplay
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft JhengHei", 10.2F)
-        Label4.ForeColor = Color.Blue
-        Label4.Location = New Point(32, 163)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(43, 22)
-        Label4.TabIndex = 7
-        Label4.Text = "Age"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft JhengHei", 10.2F)
-        Label5.ForeColor = Color.Blue
-        Label5.Location = New Point(32, 210)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(70, 22)
-        Label5.TabIndex = 8
-        Label5.Text = "Gender"
-        ' 
-        ' maleRadio
-        ' 
-        maleRadio.AutoSize = True
-        maleRadio.Location = New Point(257, 210)
-        maleRadio.Name = "maleRadio"
-        maleRadio.Size = New Size(63, 24)
-        maleRadio.TabIndex = 9
-        maleRadio.TabStop = True
-        maleRadio.Text = "Male"
-        maleRadio.UseVisualStyleBackColor = True
-        ' 
-        ' femaleRadio
-        ' 
-        femaleRadio.AutoSize = True
-        femaleRadio.Location = New Point(340, 210)
-        femaleRadio.Name = "femaleRadio"
-        femaleRadio.Size = New Size(78, 24)
-        femaleRadio.TabIndex = 10
-        femaleRadio.TabStop = True
-        femaleRadio.Text = "Female"
-        femaleRadio.UseVisualStyleBackColor = True
-        ' 
-        ' ageInput
-        ' 
-        ageInput.Location = New Point(257, 163)
-        ageInput.Name = "ageInput"
-        ageInput.Size = New Size(125, 27)
-        ageInput.TabIndex = 11
+        outputDisplay.Location = New Point(32, 276)
+        outputDisplay.Name = "outputDisplay"
+        outputDisplay.Size = New Size(386, 52)
+        outputDisplay.TabIndex = 12
+        outputDisplay.Text = ""
+        outputDisplay.Visible = False
         ' 
         ' Form1
         ' 
@@ -141,11 +95,7 @@ Partial Class Form1
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(791, 400)
-        Controls.Add(ageInput)
-        Controls.Add(femaleRadio)
-        Controls.Add(maleRadio)
-        Controls.Add(Label5)
-        Controls.Add(Label4)
+        Controls.Add(outputDisplay)
         Controls.Add(Button1)
         Controls.Add(Label3)
         Controls.Add(Label2)
@@ -163,10 +113,6 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents maleRadio As RadioButton
-    Friend WithEvents femaleRadio As RadioButton
-    Friend WithEvents ageInput As TextBox
+    Friend WithEvents outputDisplay As RichTextBox
 
 End Class
