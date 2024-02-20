@@ -1,12 +1,4 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-
-        MessageBox.Show("Welcome to the form")
-
-
-
-    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -32,7 +24,7 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim weight As Decimal
         Dim height As Decimal
         Dim bmi As Decimal
@@ -42,6 +34,18 @@
         bmi = weight / (height * height)
 
         MessageBox.Show("Your BMI is: " & Math.Round(bmi, 2))
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles maleRadio.CheckedChanged
+
+    End Sub
+
+    Private Sub ageInput_TextChanged(sender As Object, e As EventArgs) Handles ageInput.TextChanged
 
     End Sub
 End Class
